@@ -28,6 +28,8 @@
         <condition column="eid" operator="=" value="" active="true" />
       </filter>
     </filter-actions>
+    <filter-actions connection-id="ddbab451-49f6-4bec-a902-66ffc4de0483" dataset="med_lab.equipment_employee" active-filter-id="" />
+    <filter-actions connection-id="ddbab451-49f6-4bec-a902-66ffc4de0483" dataset="med_lab.equipment" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />

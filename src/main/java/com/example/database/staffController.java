@@ -5,6 +5,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
+import java.io.IOException;
+
 public class staffController {
     @FXML
     private Button backBtn1;
@@ -42,13 +44,26 @@ public class staffController {
         }
     }
 
+
     @FXML
     void onEmpBtnClick(ActionEvent event) {
+        try {
+            HelloApplication.changeScene("Employee-view.fxml", employeeBtn);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
     }
 
     @FXML
     void onEquipmentBtnClick(ActionEvent event) {
+        try {
+            HelloApplication.changeScene("equipment-view.fxml", equipmentBtn);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
     }
 
