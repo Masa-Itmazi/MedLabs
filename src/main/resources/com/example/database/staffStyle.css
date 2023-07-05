@@ -1,0 +1,123 @@
+
+.root{
+    -fx-background-image: url("https://img.freepik.com/premium-photo/medical-abstract-background-medical-digital-symbol-graphic-background-with-copy-space-blue-tone_521740-32.jpg");
+    -fx-background-color: #b2e3e1;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+#label1 {
+    -fx-text-fill: linear-gradient(to bottom, #297cb4, #77cbc8);
+    -fx-text-stroke: #ffffff;
+    -fx-text-stroke-width: 1px;
+    -fx-font-weight: bold;
+    -fx-font-size: 4em;
+    -fx-font-family: "Arial";
+    -fx-alignment: center;
+}
+#employeeBtn {
+    -fx-background-image: url('https://pics.freeicons.io/uploads/icons/png/10735354061679466236-512.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 50px 50px; /* Adjust the size of the icon as needed */
+    -fx-background-position: center; /* Center the icon within the button */
+    -fx-text-fill: transparent; /* Hide the text */
+    -fx-graphic-text-gap: 5px; /* Adjust the gap between the icon and text as needed */
+    -fx-background-color: white;
+    -fx-transition: box-shadow 0.15s;
+}
+#employeeBtn:pressed {
+    box-shadow: 15px 15px 15px;
+    -fx-background-color: #77cbc8;}
+#equipmentBtn{
+    -fx-background-image: url('https://pics.freeicons.io/uploads/icons/png/19667123911666494682-512.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 50px 50px; /* Adjust the size of the icon as needed */
+    -fx-background-position: center; /* Center the icon within the button */
+    -fx-text-fill: transparent; /* Hide the text */
+    -fx-graphic-text-gap: 5px; /* Adjust the gap between the icon and text as needed */
+    -fx-background-color: white;
+    -fx-transition: box-shadow 0.15s;
+
+
+
+}
+#equipmentBtn:pressed {
+    box-shadow: 15px 15px 15px;
+    -fx-background-color: #77cbc8;
+}
+
+#testBtn{
+    -fx-background-image: url('https://pics.freeicons.io/uploads/icons/png/14761195631666494678-512.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 50px 50px; /* Adjust the size of the icon as needed */
+    -fx-background-position: center; /* Center the icon within the button */
+    -fx-text-fill: transparent; /* Hide the text */
+    -fx-graphic-text-gap: 5px; /* Adjust the gap between the icon and text as needed */
+    -fx-background-color: white;
+    -fx-transition: box-shadow 0.15s;
+
+}
+#testBtn:pressed {
+    box-shadow: 15px 15px 15px;
+    -fx-background-color: #77cbc8;
+}
+#reportBtn{
+    -fx-background-image: url('https://pics.freeicons.io/uploads/icons/png/19066064111679563087-512.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 50px 50px; /* Adjust the size of the icon as needed */
+    -fx-background-position: center; /* Center the icon within the button */
+    -fx-text-fill: transparent; /* Hide the text */
+    -fx-graphic-text-gap: 5px; /* Adjust the gap between the icon and text as needed */
+    -fx-background-color: white;
+    -fx-transition: box-shadow 0.15s;
+}
+#reportBtn:pressed {
+    box-shadow: 15px 15px 15px;
+    -fx-background-color: #77cbc8;
+}
+#eqLabel {
+    -fx-alignment: center;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: linear-gradient(from 0% 0% to 100% 0%, #0000ff 0%, #4e92ce 50%, #29546c 50%, #888585 100%);
+}
+#reportLabel{
+    -fx-alignment: center;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: linear-gradient(from 0% 0% to 100% 0%, #0000ff 0%, #4e92ce 50%, #29546c 50%, #888585 100%);
+}
+#empLabel{
+    -fx-alignment: center;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: linear-gradient(from 0% 0% to 100% 0%, #0000ff 0%, #4e92ce 50%, #29546c 50%, #888585 100%);
+}
+#testLabel{
+    -fx-alignment: center;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: linear-gradient(from 0% 0% to 100% 0%, #375c73 0%, #4e92ce 50%, #29546c 50%, #888585 100%);
+}
+#backBtn1{
+    -fx-background-image: url('icons8-back-48.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 50px 50px; /* Adjust the size of the icon as needed */
+    -fx-background-position: center; /* Center the icon within the button */
+    -fx-text-fill: transparent; /* Hide the text */
+    -fx-graphic-text-gap: 5px; /* Adjust the gap between the icon and text as needed */
+    -fx-transition: box-shadow 0.15s;
+    -fx-background-color: transparent;
+}
+#backBtn1:pressed {
+    box-shadow: 15px 15px 15px;
+    -fx-background-color: #77cbc8;
+}
+
+
+
+
+
+
+
+

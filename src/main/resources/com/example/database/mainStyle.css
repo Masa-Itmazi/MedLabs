@@ -1,0 +1,7 @@
+.root{
+    -fx-background-image: url("https://img.freepik.com/premium-photo/medical-abstract-background-medical-digital-symbol-graphic-background-with-copy-space-blue-tone_521740-32.jpg");
+    -fx-background-color: #b2e3e1;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}

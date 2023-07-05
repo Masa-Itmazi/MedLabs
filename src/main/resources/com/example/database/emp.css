@@ -1,0 +1,79 @@
+.root{
+    -fx-background-color: #b2e3e1;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+#eLabel{
+
+    -fx-font-family: "Arial Black", Arial, sans-serif;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-padding: 5px 10px;
+    -fx-background-radius: 5px;
+    -fx-text-fill: linear-gradient(from 0% 0% to 100% 0%, purple 0%, purple 50%, #5e4872 50%, #5e4872 100%);
+}
+#eidLablel{
+    -fx-font-family: "Arial Black", Arial, sans-serif;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-padding: 5px 10px;
+    -fx-text-fill: linear-gradient(from 0% 0% to 100% 0%, purple 0%, purple 50%, #5e4872 50%, #5e4872 100%);
+
+}
+#enameLabel {
+    -fx-font-family: "Arial Black", Arial, sans-serif;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-padding: 5px 10px;
+    -fx-text-fill: linear-gradient(from 0% 0% to 100% 0%, purple 0%, purple 50%, #5e4872 50%, #5e4872 100%);
+}
+#eadrdressLabel{
+    -fx-font-family: "Arial Black", Arial, sans-serif;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-padding: 5px 10px;
+    -fx-text-fill: linear-gradient(from 0% 0% to 100% 0%, purple 0%, purple 50%, #5e4872 50%, #5e4872 100%);
+}
+#enumberLabel{
+    -fx-font-family: "Arial Black", Arial, sans-serif;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-padding: 5px 10px;
+    -fx-text-fill: linear-gradient(from 0% 0% to 100% 0%, purple 0%, purple 50%, #5e4872 50%, #5e4872 100%);
+}
+#edobLabel{
+    -fx-font-family: "Arial Black", Arial, sans-serif;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-padding: 5px 10px;
+    -fx-text-fill: linear-gradient(from 0% 0% to 100% 0%, purple 0%, purple 50%, #5e4872 50%, #5e4872 100%);
+}
+#addBtn{
+    -fx-font-family: "Arial Black", Arial, sans-serif;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-padding: 5px 10px;
+    -fx-background-color: #5e4872;
+    -fx-background-radius: 5px;
+    -fx-text-fill: white;}
+#deleteBtn{
+    -fx-font-family: "Arial Black", Arial, sans-serif;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-padding: 5px 10px;
+    -fx-background-color: #5e4872;
+    -fx-background-radius: 5px;
+    -fx-text-fill: white;}
+#updateBtn{
+    -fx-font-family: "Arial Black", Arial, sans-serif;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-padding: 5px 10px;
+    -fx-background-color: #5e4872;
+    -fx-background-radius: 5px;
+    -fx-text-fill: white;}
+
+
+
