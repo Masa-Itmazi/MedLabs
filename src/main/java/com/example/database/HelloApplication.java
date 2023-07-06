@@ -28,15 +28,6 @@ public class HelloApplication extends Application {
         DBConnector db = new DBConnector();
         db.myConnection.connectDB();
         Statement statement = db.myConnection.connectDB().createStatement();
-        String query = "SELECT * FROM employee";
-        ResultSet resultSet = statement.executeQuery(query);
-        List<Integer> empIDs = new ArrayList<>();
-
-        while (resultSet.next()) {
-            System.out.println(resultSet.getInt("eid"));
-            System.out.println(resultSet.getString("employee_name"));
-            System.out.println(resultSet.getString("employee_number"));
-        }
 
         launch();
     }

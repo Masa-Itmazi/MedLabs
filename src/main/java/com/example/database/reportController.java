@@ -73,13 +73,14 @@ public class reportController {
         }
 
     }
+
     @FXML
     void clearClk(ActionEvent event) {
 
     }
 
     @FXML
-    void deletePatient(ActionEvent event) throws SQLException, ClassNotFoundException, IOException{
+    void deletePatient(ActionEvent event) throws SQLException, ClassNotFoundException, IOException {
         DBConnector connector1 = new DBConnector();
         connector1.myConnection.connectDB();
         String rid = RidText.getText();
@@ -96,23 +97,29 @@ public class reportController {
     }
 
     @FXML
-    void insertPatient(ActionEvent event) throws SQLException, ClassNotFoundException, IOException{
+    void insertPatient(ActionEvent event) throws SQLException, ClassNotFoundException, IOException {
         DBConnector connector1 = new DBConnector();
         connector1.myConnection.connectDB();
-        String Report_ID = RidText.getText();
-        LocalDate date = RdateText.getValue();
-        String Test_ID = TidText.getText();
+
+        Integer Report_ID = Integer.valueOf(RidText.getText());
+        String date = RdateText.getValue().toString();
+        Integer Test_ID = Integer.valueOf(TidText.getText());
         String result = TresultText.getText();
 
+        Integer reportID = null;
+        String reportIDText = RidText.getText();
+        if (reportIDText != null && reportIDText.matches("\\d+")) {
+            reportID = Integer.parseInt(reportIDText);
+        } else {
+            System.out.println("Invalid input for Report ID.");
+        }
 
-        String query1 = "INSERT into report (report_id,report_date,test_result,test_id) VALUES(?,?,?,?)";
-
-
-        PreparedStatement statement = connector1.myConnection.connectDB().prepareStatement(query1);
-        statement.setString(1, Report_ID);
-        statement.setString(2, String.valueOf(date));
-        statement.setString(3,Test_ID);
-        statement.setString(4, result);
+        String query = "INSERT INTO report (report_id, report_date, test_result, test_id) VALUES (?, ?, ?, ?)";
+        PreparedStatement statement = connector1.myConnection.connectDB().prepareStatement(query);
+        statement.setInt(1, reportID);
+        statement.setString(2, date);
+        statement.setString(3, result);
+        statement.setInt(4, Test_ID);
 
         int rowsAffected = statement.executeUpdate();
 
@@ -121,37 +128,43 @@ public class reportController {
         } else {
             System.out.println("Failed to insert Report.");
         }
-
-        statement.close();
     }
 
+
     @FXML
-    void updatePatient(ActionEvent event)throws SQLException, ClassNotFoundException, IOException {
+    void updatePatient(ActionEvent event) throws SQLException, ClassNotFoundException, IOException {
         DBConnector connector1 = new DBConnector();
         connector1.myConnection.connectDB();
-        String Report_ID = RidText.getText();
+
+        Integer Report_ID = Integer.valueOf(RidText.getText());
         String date = RdateText.getValue().toString();
-        String Test_ID = TidText.getText();
+        Integer Test_ID = Integer.valueOf(TidText.getText());
         String result = TresultText.getText();
 
-        String query1 = "UPDATE report SET report_id=?,report_datem=?,test_result=?,test_id=? WHERE equipment_id=?";
+        Integer reportID = null;
+        String reportIDText = RidText.getText();
+        if (reportIDText != null && reportIDText.matches("\\d+")) {
+            reportID = Integer.parseInt(reportIDText);
+        } else {
+            System.out.println("Invalid input for Report ID.");
+        }
 
-        PreparedStatement statement = connector1.myConnection.connectDB().prepareStatement(query1);
-        statement.setString(1, Report_ID);
-        statement.setString(2, date);
-        statement.setString(3,Test_ID);
-        statement.setString(4, result);
+        String query = "UPDATE report SET report_date=?, test_result=?, test_id=? WHERE report_id=?";
+        PreparedStatement statement = connector1.myConnection.connectDB().prepareStatement(query);
+        statement.setString(1, date);
+        statement.setString(2, result);
+        statement.setInt(3, Test_ID);
+        statement.setInt(4, reportID);
 
         int rowsAffected = statement.executeUpdate();
 
         if (rowsAffected > 0) {
             System.out.println("Report updated successfully.");
         } else {
-            System.out.println("No matching Report found.");
+            System.out.println("Failed to update Report.");
         }
-        statement.close();
-    }
+    }}
 
-}
+
 
 

@@ -12,8 +12,10 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.time.LocalDate;
 
 public class testController {
 
@@ -117,63 +119,98 @@ public class testController {
 
 
         @FXML
-        void insertPatient(ActionEvent event)throws SQLException, ClassNotFoundException, IOException {
+        void updatePatient(ActionEvent event) throws SQLException, ClassNotFoundException, IOException {
                 DBConnector connector1 = new DBConnector();
                 connector1.myConnection.connectDB();
-                String ID = TIDText.getText();
+
+                Integer ID = Integer.valueOf(TIDText.getText());
                 String date = TdateText.getValue().toString();
                 String name = TnameText.getText();
-                String EID = Eid.getText();
-                String test_type_ID = TtypeID.getText();
 
-                String query1 = "INSERT into test (test_id,test_date,test_name,equipment_id,test_type_id) VALUES(?,?,?,?,?)";
-                //ResultSet resultSet1 = connector1.myConnection.connectDB().createStatement().executeQuery(query1);
-
-                PreparedStatement statement = connector1.myConnection.connectDB().prepareStatement(query1);
-                statement.setString(1, ID);
-                statement.setString(2, date);
-                statement.setString(3, name);
-                statement.setString(4, EID);
-                statement.setString(5, test_type_ID);
-
-                int rowsAffected = statement.executeUpdate();
-
-                if (rowsAffected > 0) {
-                        System.out.println("Testt inserted successfully.");
+                Integer EID = null;
+                String eidText = Eid.getText();
+                if (eidText != null && eidText.matches("\\d+")) {
+                        EID = Integer.parseInt(eidText);
                 } else {
-                        System.out.println("Failed to insert Test.");
+                        System.out.println("Invalid input for Equipment ID.");
                 }
-                statement.close();
-        }
 
-        @FXML
+                Integer test_type_ID = null;
+                String testTypeIDText = TtypeID.getText();
+                if (testTypeIDText != null && testTypeIDText.matches("\\d+")) {
+                        test_type_ID = Integer.parseInt(testTypeIDText);
+                } else {
+                        System.out.println("Invalid input for Test Type ID.");
+                }
 
-
-        void updatePatient(ActionEvent event)throws SQLException, ClassNotFoundException, IOException {
-                DBConnector connector1 = new DBConnector();
-                connector1.myConnection.connectDB();
-                String ID = TIDText.getText();
-                String date = TdateText.getValue().toString();
-                String name = TnameText.getText();
-                String EID = Eid.getText();
-                String test_type_ID = TtypeID.getText();
-
-                String query1 = "UPDATE test SET test_date=?,test_name=?,equipment_id=?,test_type_id=? WHERE test_id=?";
+                String query1 = "UPDATE test SET test_date=?, test_name=?, equipment_id=?, test_type_id=? WHERE test_id=?";
 
                 PreparedStatement statement = connector1.myConnection.connectDB().prepareStatement(query1);
                 statement.setString(1, date);
                 statement.setString(2, name);
-                statement.setString(3, EID);
-                statement.setString(4, test_type_ID);
-                statement.setInt(5, Integer.parseInt(ID));
+                statement.setObject(3, EID);
+                statement.setObject(4, test_type_ID);
+                statement.setInt(5, ID);
 
                 int rowsAffected = statement.executeUpdate();
+
                 if (rowsAffected > 0) {
                         System.out.println("Test updated successfully.");
                 } else {
                         System.out.println("No matching Test found.");
                 }
+
+        }
+
+        @FXML
+        void insertPatient(ActionEvent event) throws SQLException, ClassNotFoundException, IOException {
+                DBConnector connector1 = new DBConnector();
+                connector1.myConnection.connectDB();
+
+                Integer ID = Integer.valueOf(TIDText.getText());
+                String date = TdateText.getValue().toString();
+                String name = TnameText.getText();
+
+                Integer EID = null;
+                String eidText = Eid.getText();
+                if (eidText != null && eidText.matches("\\d+")) {
+                        EID = Integer.parseInt(eidText);
+                } else {
+                        System.out.println("Invalid input for Equipment ID.");
+                }
+
+                Integer test_type_ID = null;
+                String testTypeIDText = TtypeID.getText();
+                if (testTypeIDText != null && testTypeIDText.matches("\\d+")) {
+                        test_type_ID = Integer.parseInt(testTypeIDText);
+                } else {
+                        System.out.println("Invalid input for Test Type ID.");
+                }
+
+                String query1 = "INSERT INTO test (test_id, test_date, test_name, equipment_id, test_type_id) VALUES (?, ?, ?, ?, ?)";
+
+                PreparedStatement statement = connector1.myConnection.connectDB().prepareStatement(query1);
+                statement.setInt(1, ID);
+                statement.setString(2, date);
+                statement.setString(3, name);
+                statement.setObject(4, EID);
+                statement.setObject(5, test_type_ID);
+
+                int rowsAffected = statement.executeUpdate();
+
+                if (rowsAffected > 0) {
+                        System.out.println("Test inserted successfully.");
+                } else {
+                        System.out.println("Failed to insert Test.");
+                }
+
                 statement.close();
         }
+
+
+
+
+
+
 }
 
