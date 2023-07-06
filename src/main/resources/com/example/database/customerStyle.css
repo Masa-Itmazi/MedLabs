@@ -1,0 +1,66 @@
+.root{
+    -fx-background-image: url("https://img.freepik.com/premium-photo/medical-abstract-background-medical-digital-symbol-graphic-background-with-copy-space-blue-tone_521740-32.jpg");
+    -fx-background-color: #b2e3e1;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+#welcomeLabel{
+    -fx-text-fill: linear-gradient(to bottom, #297cb4, #77cbc8);
+    -fx-text-stroke: #ffffff;
+    -fx-text-stroke-width: 1px;
+    -fx-font-weight: bold;
+    -fx-font-size: 4em;
+    -fx-font-family: "Arial";
+    -fx-alignment: center;
+}
+#reservationLabel{
+    -fx-text-fill: linear-gradient(to bottom, #297cb4, #77cbc8);
+    -fx-text-stroke: #ffffff;
+    -fx-text-stroke-width: 1px;
+    -fx-font-weight: bold;
+    -fx-font-size: 2em;
+    -fx-font-family: "Arial";
+    -fx-alignment: center;
+}
+#resultLabel{
+    -fx-text-fill: linear-gradient(to bottom, #297cb4, #77cbc8);
+    -fx-text-stroke: #ffffff;
+    -fx-text-stroke-width: 1px;
+    -fx-font-weight: bold;
+    -fx-font-size: 2em;
+    -fx-font-family: "Arial";
+    -fx-alignment: center;
+}
+#reservationBtn{
+    -fx-background-image: url("https://pics.freeicons.io/uploads/icons/png/16105988351640226735-512.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 50px 50px; /* Adjust the size of the icon as needed */
+    -fx-background-position: center; /* Center the icon within the button */
+    -fx-text-fill: transparent; /* Hide the text */
+    -fx-graphic-text-gap: 5px; /* Adjust the gap between the icon and text as needed */
+    -fx-transition: box-shadow 0.15s;
+    -fx-background-color: white
+
+}
+
+
+#resultBtn{
+    -fx-background-image: url("https://pics.freeicons.io/uploads/icons/png/2534572941606252958-512.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 50px 50px; /* Adjust the size of the icon as needed */
+    -fx-background-position: center; /* Center the icon within the button */
+    -fx-text-fill: transparent; /* Hide the text */
+    -fx-graphic-text-gap: 5px; /* Adjust the gap between the icon and text as needed */
+    -fx-transition: box-shadow 0.15s;
+    -fx-background-color: white
+
+}
+#resultBtn:pressed {
+    box-shadow: 15px 15px 15px;
+    -fx-background-color: #77cbc8;
+}
+#reservationBtn:pressed {
+    box-shadow: 15px 15px 15px;
+    -fx-background-color: #77cbc8;
+}

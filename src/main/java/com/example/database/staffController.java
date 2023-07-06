@@ -73,7 +73,7 @@ public class staffController {
     @FXML
     void onPatientBtnClk(ActionEvent event) {
         try {
-            HelloApplication.changeScene("patient.fxml", patientBtn);
+            HelloApplication.changeScene("patient-view.fxml", patientBtn);
         } catch (IOException e) {
             e.printStackTrace();
         }

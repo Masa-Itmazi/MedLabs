@@ -18,8 +18,7 @@ public class LoginController {
     private Button submitBtn;
 
     @FXML
-    private TextField userNameTf;
-
+    private Button backBtn;
     @FXML
     void onSubmitBtnClick(ActionEvent event) throws SQLException, ClassNotFoundException, IOException {
         DBConnector connector = new DBConnector();
@@ -29,6 +28,9 @@ public class LoginController {
         //if the user does not exist, we will display an error message
 
         String eid = IDTf.getText();
+        if(eid.isEmpty()){
+            HelloApplication.AlertShow("Please enter your ID", "Error", javafx.scene.control.Alert.AlertType.ERROR);
+        }
         String query = "SELECT * FROM employee WHERE eid = " + eid;
         ResultSet resSet = connector.myConnection.connectDB().createStatement().executeQuery(query);
         //if the query returns a result, then the user exists
@@ -42,10 +44,12 @@ public class LoginController {
         } else {
             //the user does not exist
             //we will display an error message
-            System.out.println("The user does not exist");
+            HelloApplication.AlertShow("The ID you entered does not exist", "Error", javafx.scene.control.Alert.AlertType.ERROR);
         }
 
-
     }
-
+    @FXML
+    void onBackBtnClick(ActionEvent event) throws IOException {
+        HelloApplication.changeScene("hello-view.fxml", backBtn);
+    }
 }

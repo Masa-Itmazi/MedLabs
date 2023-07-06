@@ -20,29 +20,20 @@ public class HelloController {
 
     @FXML
     void onCustomerBtnClick(ActionEvent event) {
-
+        try {
+            HelloApplication.changeScene("customer-view.fxml", customerBtn);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     void onStaffBtnClick(ActionEvent event) {
-    //we will change the scene to the staff scene
-        //we will get the current scene
-
-//        try{
-//            FXMLLoader loader = new FXMLLoader(getClass().getResource("staff-view.fxml"));
-//            Parent newRoot = loader.load();
-//            Scene scene = staffBtn.getScene();
-//            scene.setRoot(newRoot);
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
         try {
             HelloApplication.changeScene("login-view.fxml", staffBtn);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-
     }
-
 }

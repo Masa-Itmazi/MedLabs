@@ -50,6 +50,17 @@
     -fx-padding: 5px 10px;
     -fx-text-fill: linear-gradient(from 0% 0% to 100% 0%, purple 0%, purple 50%, #5e4872 50%, #5e4872 100%);
 }
+#backBtn1{
+ -fx-background-image: url('icons8-back-48.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 50px 50px; /* Adjust the size of the icon as needed */
+    -fx-background-position: center; /* Center the icon within the button */
+    -fx-text-fill: transparent; /* Hide the text */
+    -fx-graphic-text-gap: 5px; /* Adjust the gap between the icon and text as needed */
+    -fx-transition: box-shadow 0.15s;
+    -fx-background-color: transparent;
+}
+
 #addBtn{
     -fx-font-family: "Arial Black", Arial, sans-serif;
     -fx-font-weight: bold;
@@ -58,6 +69,7 @@
     -fx-background-color: #5e4872;
     -fx-background-radius: 5px;
     -fx-text-fill: white;}
+
 #deleteBtn{
     -fx-font-family: "Arial Black", Arial, sans-serif;
     -fx-font-weight: bold;
