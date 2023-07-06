@@ -19,3 +19,4 @@
         <Label fx:id="patientLabel" alignment="CENTER" layoutX="533.0" layoutY="350.0" prefHeight="26.0" prefWidth="106.0" text="Patient" />
     </children>
 </AnchorPane>
+//
