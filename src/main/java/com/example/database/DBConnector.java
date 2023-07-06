@@ -7,11 +7,10 @@ import java.sql.Statement;
 import java.util.Properties;
 
 public class DBConnector {
-    private static String dbUserName = "jehad-halahla";
-    private static String dbPassword = "123123123";
+   
     private static String URL = "127.0.0.1";
     private static String port = "3306";
-    private static String dbName = "sql_labs";
+   
 
     public static DBConnection myConnection = new DBConnection(URL, port, dbName, dbUserName, dbPassword);
 }
