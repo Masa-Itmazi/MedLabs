@@ -1,20 +1,25 @@
+#backBtn{
+    -fx-background-image: url('icons8-back-48.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 50px 50px; /* Adjust the size of the icon as needed */
+    -fx-background-position: center; /* Center the icon within the button */
+    -fx-text-fill: transparent; /* Hide the text */
+    -fx-graphic-text-gap: 5px; /* Adjust the gap between the icon and text as needed */
+    -fx-transition: box-shadow 0.15s;
+    -fx-background-color: transparent;
+}
+#backBtn:pressed {
+    box-shadow: 15px 15px 15px;
+    -fx-background-color: #77cbc8;
+}
 .root{
     -fx-background-color: #b2e3e1;
     -fx-background-repeat: no-repeat;
     -fx-background-size: cover;
     -fx-background-position: center;
 }
-#eLabel{
 
-    -fx-font-family: "Arial Black", Arial, sans-serif;
-    -fx-font-size: 22px;
-    -fx-font-weight: bold;
-    -fx-alignment: center;
-    -fx-padding: 5px 10px;
-    -fx-background-radius: 5px;
-    -fx-text-fill: linear-gradient(from 0% 0% to 100% 0%, purple 0%, purple 50%, #5e4872 50%, #5e4872 100%);
-}
-#eidLablel{
+#EQidLablel{
     -fx-font-family: "Arial Black", Arial, sans-serif;
     -fx-font-weight: bold;
     -fx-alignment: center;
@@ -22,28 +27,28 @@
     -fx-text-fill: linear-gradient(from 0% 0% to 100% 0%, purple 0%, purple 50%, #5e4872 50%, #5e4872 100%);
 
 }
-#enameLabel {
+#EQnameLabel {
     -fx-font-family: "Arial Black", Arial, sans-serif;
     -fx-font-weight: bold;
     -fx-alignment: center;
     -fx-padding: 5px 10px;
     -fx-text-fill: linear-gradient(from 0% 0% to 100% 0%, purple 0%, purple 50%, #5e4872 50%, #5e4872 100%);
 }
-#eadrdressLabel{
+#EQdopLabel{
     -fx-font-family: "Arial Black", Arial, sans-serif;
     -fx-font-weight: bold;
     -fx-alignment: center;
     -fx-padding: 5px 10px;
     -fx-text-fill: linear-gradient(from 0% 0% to 100% 0%, purple 0%, purple 50%, #5e4872 50%, #5e4872 100%);
 }
-#enumberLabel{
+#EpriceLabel{
     -fx-font-family: "Arial Black", Arial, sans-serif;
     -fx-font-weight: bold;
     -fx-alignment: center;
     -fx-padding: 5px 10px;
     -fx-text-fill: linear-gradient(from 0% 0% to 100% 0%, purple 0%, purple 50%, #5e4872 50%, #5e4872 100%);
 }
-#edobLabel{
+#EqmodelLabel{
     -fx-font-family: "Arial Black", Arial, sans-serif;
     -fx-font-weight: bold;
     -fx-alignment: center;
@@ -74,22 +79,9 @@
     -fx-background-color: #5e4872;
     -fx-background-radius: 5px;
     -fx-text-fill: white;}
-#backBtn{
-    -fx-background-image: url('icons8-back-48.png');
-    -fx-background-repeat: no-repeat;
-    -fx-background-size: 50px 50px; /* Adjust the size of the icon as needed */
-    -fx-background-position: center; /* Center the icon within the button */
-    -fx-text-fill: transparent; /* Hide the text */
-    -fx-graphic-text-gap: 5px; /* Adjust the gap between the icon and text as needed */
-    -fx-transition: box-shadow 0.15s;
-    -fx-background-color: transparent;
-}
-#backBtn:pressed {
-    box-shadow: 15px 15px 15px;
-    -fx-background-color: #77cbc8;
-}
+
 #clearBtn{
-    -fx-background-image: url('https://pics.freeicons.io/uploads/icons/png/19634453251558096224-512.png');
+    -fx-background-image: url('https://pics.freeicons.io/uploads/icons/png/130318831316313447244152-512.png');
     -fx-background-repeat: no-repeat;
     -fx-background-size: 50px 50px; /* Adjust the size of the icon as needed */
     -fx-background-position: center; /* Center the icon within the button */
@@ -100,6 +92,15 @@
 #clearBtn:pressed {
     box-shadow: 15px 15px 15px;
     -fx-background-color: #77cbc8;
+}
+#ELabel{
+    -fx-font-family: "Arial Black", Arial, sans-serif;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-padding: 5px 10px;
+    -fx-background-radius: 5px;
+    -fx-text-fill: linear-gradient(from 0% 0% to 100% 0%, purple 0%, purple 50%, #5e4872 50%, #5e4872 100%);
 }
 
 

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="724.0" prefWidth="980.0" stylesheets="@emp.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.database.patientController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="724.0" prefWidth="980.0" stylesheets="@patient.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.database.patientController">
     <children>
         <Pane layoutY="-1.0" prefHeight="630.0" prefWidth="307.0">
             <children>
@@ -46,8 +46,8 @@
 
             </columns>
         </TableView>
-        <Label fx:id="eLabel" layoutX="383.0" layoutY="14.0" prefHeight="37.0" prefWidth="173.0" text="Patient" />
-      <Button fx:id="backBtn1" layoutX="21.0" layoutY="649.0" mnemonicParsing="false" onAction="#backClk1" text="back" />
-      <Button fx:id="clearBtn1" layoutX="172.0" layoutY="649.0" mnemonicParsing="false" onAction="#clearClk1" prefHeight="26.0" prefWidth="70.0" text="clear" />
+        <Label fx:id="pLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="383.0" layoutY="14.0" prefHeight="37.0" prefWidth="173.0" text="Patient" />
+      <Button fx:id="backBtn1" layoutX="14.0" layoutY="625.0" mnemonicParsing="false" onAction="#backClk1" prefHeight="73.0" prefWidth="140.0" text="back" />
+      <Button fx:id="clearBtn1" layoutX="176.0" layoutY="624.0" mnemonicParsing="false" onAction="#clearClk1" prefHeight="66.0" prefWidth="117.0" text="clear" />
     </children>
 </AnchorPane>

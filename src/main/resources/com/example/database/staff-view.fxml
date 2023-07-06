@@ -15,7 +15,6 @@
         <Label fx:id="eqLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="155.0" layoutY="347.0" prefHeight="18.0" prefWidth="106.0" text="Equipment" />
         <Label fx:id="testLabel" alignment="CENTER" layoutX="158.0" layoutY="488.0" prefHeight="18.0" prefWidth="97.0" text="Test" />
         <Label fx:id="reportLabel" alignment="CENTER" layoutX="544.0" layoutY="213.0" prefHeight="18.0" prefWidth="85.0" text="Report" />
-      <Button mnemonicParsing="false" text="Button" />
       <Button fx:id="patientBtn" layoutX="501.0" layoutY="260.0" mnemonicParsing="false" onAction="#onPatientBtnClk" prefHeight="79.0" prefWidth="170.0" text="Button" />
       <Label fx:id="patientLabel" alignment="CENTER" layoutX="533.0" layoutY="350.0" prefHeight="26.0" prefWidth="106.0" text="Patient" />
     </children>

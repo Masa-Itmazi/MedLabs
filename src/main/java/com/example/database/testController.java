@@ -12,8 +12,11 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class testController {
+
 
 
 
@@ -24,13 +27,19 @@ public class testController {
         private Label EidLabel;
 
         @FXML
-        private TextField RidText;
+        private TextField EidText;
+
+        @FXML
+        private TextField TIDText;
 
         @FXML
         private TableColumn<?, ?> TdateC;
 
         @FXML
         private Label TdateLabel;
+
+        @FXML
+        private DatePicker TdateText;
 
         @FXML
         private TableView<?> TestTBL;
@@ -42,16 +51,13 @@ public class testController {
         private Label TidLablel;
 
         @FXML
-        private TextField TidText;
-
-        @FXML
         private TableColumn<?, ?> TnameC;
 
         @FXML
         private Label TnameLabel;
 
         @FXML
-        private TextField TresultText;
+        private TextField TnameText;
 
         @FXML
         private Label TtypeID;
@@ -90,17 +96,84 @@ public class testController {
         }
 
         @FXML
-        void deletePatient(ActionEvent event) {
 
+                void deletePatient(ActionEvent event) throws SQLException, ClassNotFoundException, IOException{
+                        DBConnector connector1 = new DBConnector();
+                        connector1.myConnection.connectDB();
+                        String tid = TIDText.getText();
+
+                        String query = "DELETE FROM test WHERE test_id=" +tid;
+
+                        int rowsAffected = connector1.myConnection.connectDB().createStatement().executeUpdate(query);
+
+                        if (rowsAffected > 0) {
+                                System.out.println("Test deleted successfully.");
+                        } else {
+                                System.out.println("No matching Test  found.");
+                        }
+
+                }
+
+
+
+        @FXML
+        void insertPatient(ActionEvent event)throws SQLException, ClassNotFoundException, IOException {
+                DBConnector connector1 = new DBConnector();
+                connector1.myConnection.connectDB();
+                String ID = TIDText.getText();
+                String date = TdateText.getValue().toString();
+                String name = TnameText.getText();
+                String EID = Eid.getText();
+                String test_type_ID = TtypeID.getText();
+
+                String query1 = "INSERT into test (test_id,test_date,test_name,equipment_id,test_type_id) VALUES(?,?,?,?,?)";
+                //ResultSet resultSet1 = connector1.myConnection.connectDB().createStatement().executeQuery(query1);
+
+                PreparedStatement statement = connector1.myConnection.connectDB().prepareStatement(query1);
+                statement.setString(1, ID);
+                statement.setString(2, date);
+                statement.setString(3, name);
+                statement.setString(4, EID);
+                statement.setString(5, test_type_ID);
+
+                int rowsAffected = statement.executeUpdate();
+
+                if (rowsAffected > 0) {
+                        System.out.println("Testt inserted successfully.");
+                } else {
+                        System.out.println("Failed to insert Test.");
+                }
+                statement.close();
         }
 
         @FXML
-        void insertPatient(ActionEvent event) {
 
-        }
 
-        @FXML
-        void updatePatient(ActionEvent event) {
+        void updatePatient(ActionEvent event)throws SQLException, ClassNotFoundException, IOException {
+                DBConnector connector1 = new DBConnector();
+                connector1.myConnection.connectDB();
+                String ID = TIDText.getText();
+                String date = TdateText.getValue().toString();
+                String name = TnameText.getText();
+                String EID = Eid.getText();
+                String test_type_ID = TtypeID.getText();
 
+                String query1 = "UPDATE test SET test_date=?,test_name=?,equipment_id=?,test_type_id=? WHERE test_id=?";
+
+                PreparedStatement statement = connector1.myConnection.connectDB().prepareStatement(query1);
+                statement.setString(1, date);
+                statement.setString(2, name);
+                statement.setString(3, EID);
+                statement.setString(4, test_type_ID);
+                statement.setInt(5, Integer.parseInt(ID));
+
+                int rowsAffected = statement.executeUpdate();
+                if (rowsAffected > 0) {
+                        System.out.println("Test updated successfully.");
+                } else {
+                        System.out.println("No matching Test found.");
+                }
+                statement.close();
         }
 }
+

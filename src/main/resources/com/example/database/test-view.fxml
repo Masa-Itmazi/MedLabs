@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="724.0" prefWidth="980.0" stylesheets="@emp.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.database.testController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="724.0" prefWidth="980.0" stylesheets="@test.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.database.testController">
 
 
     <children>
@@ -19,15 +19,17 @@
                 <Label fx:id="TnameLabel" alignment="CENTER" contentDisplay="CENTER" layoutY="96.0" prefHeight="27.0" prefWidth="117.0" text="Test Name" />
                 <Label fx:id="TdateLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="-7.0" layoutY="140.0" prefHeight="27.0" prefWidth="123.0" text="Test Date" />
                 <Label fx:id="EidLabel" alignment="CENTER" contentDisplay="CENTER" layoutY="181.0" prefHeight="27.0" prefWidth="117.0" text="Equipment ID" />
-                <Label fx:id="TtypeID" alignment="CENTER" contentDisplay="CENTER" layoutY="181.0" prefHeight="27.0" prefWidth="117.0" text="Test Type ID" />
+                <Label fx:id="TtypeID" alignment="CENTER" contentDisplay="CENTER" layoutX="-4.0" layoutY="229.0" prefHeight="27.0" prefWidth="117.0" text="Test Type ID" />
 
-                <TextField fx:id="RidText" layoutX="130.0" layoutY="59.0" prefHeight="25.0" prefWidth="175.0" />
-                <TextField fx:id="TresultText" layoutX="130.0" layoutY="97.0" prefHeight="25.0" prefWidth="175.0" />
-                <TextField fx:id="TidText" layoutX="132.0" layoutY="182.0" prefHeight="25.0" prefWidth="175.0" />
+                <TextField layoutX="130.0" layoutY="230.0" prefHeight="25.0" prefWidth="175.0" promptText="TtypeID" />
+                <TextField fx:id="TnameText" layoutX="130.0" layoutY="97.0" prefHeight="25.0" prefWidth="175.0" />
+                <TextField fx:id="EidText" layoutX="132.0" layoutY="182.0" prefHeight="25.0" prefWidth="175.0" />
+                <DatePicker fx:id="TdateText" layoutX="133.0" layoutY="141.0" prefHeight="25.0" prefWidth="175.0" />
+                <TextField fx:id="TIDText" layoutX="130.0" layoutY="59.0" prefHeight="25.0" prefWidth="175.0" />
                 <Button fx:id="addBtn" layoutX="78.0" layoutY="402.0" mnemonicParsing="false" onAction="#insertPatient" prefHeight="25.0" prefWidth="91.0" text="ADD" />
                 <Button fx:id="deleteBtn" layoutX="78.0" layoutY="451.0" mnemonicParsing="false" onAction="#deletePatient" prefHeight="25.0" prefWidth="91.0" text="DELETE" />
                 <Button fx:id="updateBtn" layoutX="78.0" layoutY="511.0" mnemonicParsing="false" onAction="#updatePatient" prefHeight="25.0" prefWidth="91.0" text="UPDATE" />
-                <DatePicker layoutX="133.0" layoutY="141.0" prefHeight="25.0" prefWidth="175.0" />
+
             </children>
         </Pane>
         <TableView fx:id="TestTBL" layoutX="430.0" layoutY="125.0" prefHeight="578.0" prefWidth="502.0">
@@ -38,9 +40,9 @@
                 <TableColumn fx:id="Eid" prefWidth="114.4000244140625" text="Equipment ID" />
             </columns>
         </TableView>
-        <Label fx:id="eLabel" layoutX="316.0" layoutY="14.0" prefHeight="37.0" prefWidth="173.0" text="Report" />
-        <Button fx:id="back3" alignment="CENTER" contentDisplay="CENTER" layoutX="61.0" layoutY="648.0" mnemonicParsing="false" onAction="#backClk" prefHeight="26.0" prefWidth="117.0" />
-      <Button fx:id="clearBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="232.0" layoutY="648.0" mnemonicParsing="false" onAction="#clearClk" prefHeight="26.0" prefWidth="117.0" text="clear" />
+        <Label fx:id="TLabel" layoutX="392.0" layoutY="14.0" prefHeight="37.0" prefWidth="173.0" text="Test" />
+        <Button fx:id="back3" alignment="CENTER" contentDisplay="CENTER" layoutX="38.0" layoutY="622.0" mnemonicParsing="false" onAction="#backClk" prefHeight="66.0" prefWidth="143.0" />
+      <Button fx:id="clearBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="260.0" layoutY="622.0" mnemonicParsing="false" onAction="#clearClk" prefHeight="66.0" prefWidth="143.0" text="clear" />
     </children>
 
 
