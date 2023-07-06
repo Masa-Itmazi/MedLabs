@@ -19,6 +19,10 @@ public class staffController {
 
     @FXML
     private Label eqLabel;
+    @FXML
+    private Label patientLabel;
+    @FXML
+    private Button patientBtn;
 
     @FXML
     private Button equipmentBtn;
@@ -66,6 +70,16 @@ public class staffController {
 
 
     }
+    @FXML
+    void onPatientBtnClk(ActionEvent event) {
+        try {
+            HelloApplication.changeScene("patient.fxml", patientBtn);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 
     @FXML
     void onReportBtnClick(ActionEvent event) {
