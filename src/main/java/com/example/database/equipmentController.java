@@ -72,12 +72,16 @@ public class equipmentController {
     private Button updateBtn;
 
     @FXML
-    void back(ActionEvent event) {
+    void backClk(ActionEvent event) {
         try {
             HelloApplication.changeScene("staff-view.fxml",backBtn);
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+    }
+    @FXML
+    void clearClk(ActionEvent event) {
 
     }
 

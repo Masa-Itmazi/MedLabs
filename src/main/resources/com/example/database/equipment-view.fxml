@@ -25,7 +25,8 @@
                 <Button fx:id="addBtn" layoutX="78.0" layoutY="312.0" mnemonicParsing="false" onAction="#insertEquipment" prefHeight="25.0" prefWidth="91.0" text="ADD" />
                 <Button fx:id="deleteBtn" layoutX="78.0" layoutY="371.0" mnemonicParsing="false" onAction="#deleteEquipment" prefHeight="25.0" prefWidth="91.0" text="DELETE" />
                 <Button fx:id="updateBtn" layoutX="77.0" layoutY="437.0" mnemonicParsing="false" onAction="#updateEquipment" prefHeight="25.0" prefWidth="91.0" text="UPDATE" />
-            <Button fx:id="backBtn" layoutX="26.0" layoutY="567.0" mnemonicParsing="false" onAction="#back" text="back" />
+            <Button fx:id="backBtn" layoutX="26.0"  layoutY="567.0" mnemonicParsing="false" onAction="#backClk" text="back" />
+            <Button fx:id="clearBtn" layoutX="168.0" layoutY="567.0" mnemonicParsing="false" onAction="#clearClk" prefHeight="25.0" prefWidth="91.0" text="clear" />
             </children>
         </Pane>
         <TableView fx:id="patientTBL" layoutX="306.0" layoutY="98.0" prefHeight="533.0" prefWidth="522.0">

@@ -20,6 +20,12 @@ public class HelloController {
 
     @FXML
     void onCustomerBtnClick(ActionEvent event) {
+        try {
+            HelloApplication.changeScene("Customer-view.fxml", customerBtn);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
     }
 
