@@ -14,10 +14,10 @@ public class patientController {
     private TableColumn<?, ?> addressC;
 
     @FXML
-    private Button backBtn;
+    private Button backBtn1;
 
     @FXML
-    private Button clearBtn;
+    private Button clearBtn1;
 
     @FXML
     private Button deleteBtn;
@@ -92,9 +92,9 @@ public class patientController {
     private Button updateBtn;
 
     @FXML
-    void backClk(ActionEvent event) {
+    void backClk1(ActionEvent event) {
         try {
-            HelloApplication.changeScene("staff-view.fxml",backBtn);
+            HelloApplication.changeScene("staff-view.fxml",backBtn1);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -102,7 +102,7 @@ public class patientController {
     }
 
     @FXML
-    void clearClk(ActionEvent event) {
+    void clearClk1(ActionEvent event) {
 
     }
 

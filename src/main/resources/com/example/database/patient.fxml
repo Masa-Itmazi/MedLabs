@@ -47,7 +47,7 @@
             </columns>
         </TableView>
         <Label fx:id="eLabel" layoutX="383.0" layoutY="14.0" prefHeight="37.0" prefWidth="173.0" text="Patient" />
-      <Button fx:id="backBtn" layoutX="21.0" layoutY="649.0" mnemonicParsing="false" onAction="#backClk" text="back" />
-      <Button fx:id="clearBtn" layoutX="172.0" layoutY="649.0" mnemonicParsing="false" onAction="#clearClk" prefHeight="26.0" prefWidth="70.0" text="clear" />
+      <Button fx:id="backBtn1" layoutX="21.0" layoutY="649.0" mnemonicParsing="false" onAction="#backClk1" text="back" />
+      <Button fx:id="clearBtn1" layoutX="172.0" layoutY="649.0" mnemonicParsing="false" onAction="#clearClk1" prefHeight="26.0" prefWidth="70.0" text="clear" />
     </children>
 </AnchorPane>

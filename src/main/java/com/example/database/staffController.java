@@ -83,11 +83,21 @@ public class staffController {
 
     @FXML
     void onReportBtnClick(ActionEvent event) {
+        try {
+            HelloApplication.changeScene("report-view.fxml", patientBtn);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
     @FXML
     void onTestBtnClick(ActionEvent event) {
+        try {
+            HelloApplication.changeScene("test-view.fxml", patientBtn);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
