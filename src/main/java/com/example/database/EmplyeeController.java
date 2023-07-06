@@ -123,22 +123,31 @@ public class EmplyeeController {
     }
 
     @FXML
-    void updateEMP(ActionEvent event)throws ClassNotFoundException, SQLException {
-        DBConnector connector1 = new DBConnector();
-        connector1.myConnection.connectDB();
+    void updateEMP(ActionEvent event) throws ClassNotFoundException, SQLException {
+        DBConnector connector11 = new DBConnector();
+        connector11.myConnection.connectDB();
         String eid = eidText.getText();
+        String employee_name = enameText.getText();
+        String employee_address = eaddressText.getText();
+        String employee_dob = edobText.getText();
+        String employee_number = enumberText.getText();
 
-        String query1 = "Update employee Set employee_name='Mohammad' WHERE eid= "+eid ;
-        //ResultSet resultSet1 = connector1.myConnection.connectDB().createStatement().executeQuery(query1);
+        String query1 = "UPDATE employee SET employee_name=?, employee_dob=?, employee_address=?, employee_number=? WHERE eid=?";
+        PreparedStatement statement1 = connector11.myConnection.connectDB().prepareStatement(query1);
+        statement1.setString(1, employee_name);
+        statement1.setString(2, employee_dob);
+        statement1.setString(3, employee_address);
+        statement1.setString(4, employee_number);
+        statement1.setString(5, eid);
 
-        int rowsAffected = connector1.myConnection.connectDB().createStatement().executeUpdate(query1);
+        int rowsAffected = statement1.executeUpdate();
 
         if (rowsAffected > 0) {
-            System.out.println("Employee name updated successfully.");
+            System.out.println("Employee information updated successfully.");
         } else {
             System.out.println("No matching employee found.");
         }
-
+        statement1.close();
     }
 
 
