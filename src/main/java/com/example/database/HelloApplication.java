@@ -30,7 +30,7 @@ public class HelloApplication extends Application {
             logout(stage);
         });
     }
-
+//
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
         launch();
     }
