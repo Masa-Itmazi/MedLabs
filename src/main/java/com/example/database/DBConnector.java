@@ -8,8 +8,12 @@ import java.util.Properties;
 
 public class DBConnector {
    
+   private static String dbUserName = "root";
+    private static String dbPassword = "masa123";
+
     private static String URL = "127.0.0.1";
     private static String port = "3306";
+    private static String dbName = "med_lab";
    
 
     public static DBConnection myConnection = new DBConnection(URL, port, dbName, dbUserName, dbPassword);
