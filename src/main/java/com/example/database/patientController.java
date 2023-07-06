@@ -103,27 +103,7 @@ public class patientController {
 
     }
 
-    @FXML
-    void clearClk1(ActionEvent event) {
+   
 
-    }
-    @FXML
-    void reloadClk(ActionEvent event) {
-
-    }
-
-    @FXML
-    void deletePatient(ActionEvent event) {
-
-    }
-
-    @FXML
-    void insertPatient(ActionEvent event) {
-
-    }
-
-    @FXML
-    void updatePatient(ActionEvent event) {
-
-    }
+   
 }
