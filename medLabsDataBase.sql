@@ -128,3 +128,50 @@ INSERT INTO test_type (test_id, test_cost, notes, range_of_values, test_name, te
 VALUES (2, 150.00, 'Requires fasting for 12 hours prior to the test.', 'Negative, Positive', 'Cholesterol Test', 'Laboratory', 1);
 INSERT INTO test_type (test_id, test_cost, notes, range_of_values, test_name, test_category, turn_around_time)
 VALUES (3, 80.00, 'No special notes.', '0-50', 'Hemoglobin Test', 'Laboratory', 2);
+create Table Patient ( 
+PatientEmail varchar(30),
+DateOFBirthday Date,
+PatientID int primary KEY,
+Gender varchar(20),
+PatientAddress varchar(40),
+PatientName varchar(20));
+INSERT INTO patient (PatientEmail, DateOFBirthday, PatientID, Gender, PatientAddress, PatientName)
+VALUES 
+  ('janeSmith@gmail.com', '1985-09-10', 2, 'Female', '456 Elm Street', 'Jane Smith'),
+  ('mikeJohnson@gmail.com', '1978-03-22', 3, 'Male', '789 Oak Avenue', 'Mike Johnson'),
+  ('EmilyDavis@gmail.com', '1995-11-27', 4, 'Female', '321 Maple Road', 'Emily Davis');
+    select * from patient;
+create TABLE Payment(SerialNum INT primary key);
+INSERT INTO Payment (SerialNum)
+VALUES (1), (2), (3);
+create TABLE Insurance(
+Customer_Insurance_ID INT primary key, 
+Customer_Name varchar(20),
+Date_INSU date);
+INSERT INTO Insurance (Customer_Insurance_ID, Customer_Name, Date_INSU)
+VALUES (1, 'John Doe', '2022-01-15'), (2, 'Jane Smith', '2022-02-20'), (3, 'Mike Johnson', '2022-03-10');
+  select * from Payment;
+create TABLE Cash_ORDER(date_Cash Date);
+INSERT INTO Cash_ORDER (date_Cash)
+VALUES ('2022-01-15'), ('2022-02-20'), ('2022-03-10');
+  select * from Cash_ORDER;
+create table bill( 
+bill_ID int primary key,
+Price int,
+profits int ,
+Bill_Type varchar(20)); 
+INSERT INTO bill (bill_ID, Price, profits, Bill_Type)
+VALUES (1, 100, 20, 'Sales'), (2, 200, 40, 'Expenses'), (3, 150, 30, 'Revenue');
+  select * from bill;
+create table Insurance_Company(
+name varchar(20) primary key,
+discount_in_price int);
+INSERT INTO Insurance_Company (name, discount_in_price)
+VALUES ('ABC Insurance', 10), ('XYZ Insurance', 5), ('PQR Insurance', 15);
+  select * from Insurance_Company;
+create table insurance_customer( 
+ID int primary key,
+name varchar(20));
+INSERT INTO insurance_customer (ID, name)
+VALUES (1, 'John Doe'), (2, 'Jane Smith'), (3, 'Mike Johnson');
+ select * from insurance_customer;
