@@ -175,3 +175,19 @@ name varchar(20));
 INSERT INTO insurance_customer (ID, name)
 VALUES (1, 'John Doe'), (2, 'Jane Smith'), (3, 'Mike Johnson');
  select * from insurance_customer;
+
+ALTER TABLE patient
+ADD COLUMN PatientNumber int;
+
+ALTER TABLE patient
+MODIFY COLUMN  PatientNumber varchar(30);
+
+UPDATE patient
+SET PatientNumber = '+970-569630-894'
+WHERE PatientID=2;
+UPDATE patient
+SET PatientNumber = '+970-569-457-832'
+WHERE PatientID=3;
+UPDATE patient
+SET PatientNumber = '+970-569-632-587'
+WHERE PatientID=4;
